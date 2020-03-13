@@ -95,7 +95,7 @@
 {{ $showvisitedlinks := .showvisitedlinks }}
 {{ $currentNode := .currentnode }}
 {{ $currentFileUniqueID := "" }}
-{{ with $currentNode.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }}
+{{ with $currentNode.File }}{{ $currentFileUniqueID := .UniqueID }}{{ end }}
  {{with .sect}}
   {{if and .IsSection ((not .Params.hidden) or $.showhidden)}}
     {{safeHTML .Params.head}}
